@@ -38,31 +38,42 @@ def ages():
 
 def digits():
     print('4')
-    digits1 = input('Please enter number:')
-    if digits1.isdigit():
-        digits1 = int(digits1)
-        if digits1 > 0:
-            if digits1 % 2 > 0:
-                print(f'Число {digits1} не парне.')
+    loop = True
+    while (loop):
+        digits1 = input('Please enter number:')
+        if digits1.isdigit():
+            digits1 = int(digits1)
+            if digits1 > 0:
+                if digits1 % 2 > 0:
+                    print(f'Число {digits1} не парне.')
+                    loop = False
+                else:
+                    print(f'Число {digits1} парне.')
+                    loop = False
             else:
-                print(f'Число {digits1} парне.')
+                print(f'Число менше або дорівнює нулю')
         else:
-            print(f'Число менше або дорівнює нулю')
+            print('Its not number')
 
 def digits2():
     print('5')
     digits1 = input('Please enter number:')
-    if digits1.isdigit():
-        digits1 = int(digits1)
-        if digits1 > 0:
-            digits1 = digits1 + (digits1**digits1) + (digits1*digits1*digits1)
-            print(f'n + (n**n) + (n*n*n) = {digits1}. Не впевнений що зрозумів завдання')
+    loop = True
+    while (loop):
+        if digits1.isdigit():
+            digits1 = int(digits1)
+            if digits1 > 0:
+                digits1 = digits1 + (digits1**digits1) + (digits1*digits1*digits1)
+                print(f'n + (n**n) + (n*n*n) = {digits1}. Не впевнений що зрозумів завдання')
+                loop = False
+            else:
+                print(f'Число менше або дорівнює нулю')
         else:
-            print(f'Число менше або дорівнює нулю')
+            print('Its not number')
 
 if __name__ == '__main__':
-    print_hi()
-    sum_numbers()
-    ages()
+    # print_hi()
+    # sum_numbers()
+    # ages()
     digits()
     digits2()
