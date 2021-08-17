@@ -72,8 +72,8 @@ def digits2():
             print('Its not number')
 
 if __name__ == '__main__':
-    # print_hi()
-    # sum_numbers()
-    # ages()
+    print_hi()
+    sum_numbers()
+    ages()
     digits()
     digits2()
