@@ -1,10 +1,12 @@
 import datetime
 
 def print_hi():
+    print('1')
     in_name = input('Please enter your name:')
     print(f'Welcome ,{in_name}!')
 
 def sum_numbers():
+    print('2')
     digits1 = input('Please enter first number:')
     if digits1.isdigit():
         digits1 = int(digits1)
@@ -18,9 +20,10 @@ def sum_numbers():
     print(f'Sum two numbers - {digits1 + digits2}!')
 
 def ages():
+    print('3')
     in_name = input('Please enter your name:')
     print(f'Welcome ,{in_name}!')
-    age = input('Please enter first number:')
+    age = input('Please enter your age:')
     if age.isdigit():
         age = int(age)
         to_year = 100 - age
@@ -31,6 +34,7 @@ def ages():
         print('Its not number')
 
 def digits():
+    print('4')
     digits1 = input('Please enter number:')
     if digits1.isdigit():
         digits1 = int(digits1)
@@ -43,6 +47,7 @@ def digits():
             print(f'Число менше або дорівнює нулю')
 
 def digits2():
+    print('5')
     digits1 = input('Please enter number:')
     if digits1.isdigit():
         digits1 = int(digits1)
