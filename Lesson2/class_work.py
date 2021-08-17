@@ -7,17 +7,20 @@ def print_hi():
 
 def sum_numbers():
     print('2')
-    digits1 = input('Please enter first number:')
-    if digits1.isdigit():
-        digits1 = int(digits1)
-    else:
-        print('Its not number')
-    digits2 = input('Please enter second number:')
-    if digits2.isdigit():
-        digits2 = int(digits2)
-    else:
-        print('Its not number')
-    print(f'Sum two numbers - {digits1 + digits2}!')
+    loop = True
+    while(loop):
+        digits1 = input('Please enter first number:')
+        if digits1.isdigit():
+            digits1 = int(digits1)
+            digits2 = input('Please enter second number:')
+            if digits2.isdigit():
+                digits2 = int(digits2)
+                print(f'Sum two numbers - {digits1 + digits2}!')
+                loop = False
+            else:
+                print('Its not number')
+        else:
+            print(f'Its not number!')
 
 def ages():
     print('3')
