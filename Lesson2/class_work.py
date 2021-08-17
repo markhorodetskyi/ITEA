@@ -57,9 +57,9 @@ def digits():
 
 def digits2():
     print('5')
-    digits1 = input('Please enter number:')
     loop = True
     while (loop):
+        digits1 = input('Please enter number:')
         if digits1.isdigit():
             digits1 = int(digits1)
             if digits1 > 0:
