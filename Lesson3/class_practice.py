@@ -24,10 +24,8 @@ my_str_4 = ' '.join(my_str_4)
 print(my_str_4)
 
 print('Завдання 5')
-my_str_5 = my_str_4
-my_str_5 = my_str_5.split(' ')
-my_str_5 = ''.join(my_str_5)
-print(my_str_5)
+print(''.join(s for s in my_str_4 if s != ' '))
+
 
 print('Завдання 6')
 my_str_6 = 'HelloWorlD'

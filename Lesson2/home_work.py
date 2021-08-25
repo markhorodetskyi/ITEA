@@ -1,6 +1,7 @@
 import random
 import time
 
+
 def is_float(value):
     try:
         if ',' in value:
@@ -12,6 +13,7 @@ def is_float(value):
     except Exception as e:
         print(f'Error: {e}')
         return False
+
 
 def yes_or_no():
     print('Введіть "так" або "ні": ')
@@ -25,6 +27,7 @@ def yes_or_no():
             return False
         else:
             print('Не коректна відповідь. Введіть "так" або "ні": ')
+
 
 def check_value(value):
     if value:
@@ -57,6 +60,7 @@ def check_value(value):
     else:
         print('Ви нічого не ввели. Спробуйте ще раз.')
         return False
+
 
 def main():
     main_loop = True
@@ -92,8 +96,10 @@ def main():
                             digits_two = check_value(digits_two)
                             if digits_two:
                                 print(f'    Сума двох чисел: {digits_one} + {digits_two} = {digits_one + digits_two}.')
-                                print(f'    Різниця двох чисел: {digits_one} - {digits_two} = {digits_one - digits_two}.')
-                                print(f'    Ділення двох чисел: {digits_one} / {digits_two} = {digits_one / digits_two}.')
+                                print(
+                                    f'    Різниця двох чисел: {digits_one} - {digits_two} = {digits_one - digits_two}.')
+                                print(
+                                    f'    Ділення двох чисел: {digits_one} / {digits_two} = {digits_one / digits_two}.')
                                 print(f'    Квадрат першого числа {digits_one}:  {digits_one ** 2}.')
                                 loop_two = False
                                 loop_one = False
@@ -112,9 +118,9 @@ def main():
                             pizza = input()
                             pizza = check_value(pizza)
                             if pizza:
-                                pieces = pizza*8
+                                pieces = pizza * 8
                                 residual = pieces % people
-                                each_one_piece = int((pieces-residual)/people)
+                                each_one_piece = int((pieces - residual) / people)
                                 if people == 1:
                                     human = 'людина'
                                 else:
@@ -160,7 +166,8 @@ def main():
                         if first_curr <= 4:
                             loop_two = True
                             while loop_two:
-                                print(f'''Введіть номер валюти з якою ви хочете порівняти {currencies[first_curr]['name']}: ''')
+                                print(
+                                    f'''Введіть номер валюти з якою ви хочете порівняти {currencies[first_curr]['name']}: ''')
                                 second_curr = input()
                                 second_curr = check_value(second_curr)
                                 if second_curr:
@@ -171,9 +178,11 @@ def main():
                                             count_curr = input()
                                             count_curr = check_value(count_curr)
                                             if count_curr:
-                                                result = (currencies[first_curr]['points'] / currencies[second_curr]['points'])*count_curr
+                                                result = (currencies[first_curr]['points'] / currencies[second_curr][
+                                                    'points']) * count_curr
                                                 result = round(float(result), 2)
-                                                print(f'''{count_curr} {currencies[first_curr]['name']} = {result} {currencies[second_curr]['name']}''')
+                                                print(
+                                                    f'''{count_curr} {currencies[first_curr]['name']} = {result} {currencies[second_curr]['name']}''')
                                                 loop_three = False
                                                 loop_two = False
                                                 loop_one = False
@@ -212,6 +221,7 @@ def main():
             break
         else:
             print(f'Ви ввели {task}!')
+
 
 if __name__ == '__main__':
     main()
