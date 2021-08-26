@@ -74,11 +74,6 @@ class Manipulation:
                 if letter.isupper():
                     print(f'Літера {letter.lower()} у верхньому реєстрі')
 
-    def password(self, size):
-        chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
-        return ''.join(random.choice(chars) for x in range(size, 12))
-
-
 
 def main():
     main_loop = True
@@ -146,7 +141,7 @@ def main():
                         continue
                     if size.isdigit():
                         size = int(size)
-                        if size >=8 and size <=16:
+                        if size >= 8 and size <= 16:
                             chars = (string.ascii_uppercase, string.ascii_lowercase, string.digits)
                             print(f'''Ваш новий пароль - "{''.join(secrets.choice(secrets.choice(chars)) for x in range(0, size))}"''')
                             low_loop = False
