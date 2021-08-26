@@ -40,4 +40,45 @@ print('')
 new_dict = {value: key for key, value in my_dict.items()}
 print(f'Ключі та значення міняємо місцями - {new_dict}')
 
+print('')
+print('   Завдання 6')
+int_list = [2, 5, 1, 7, 9, 3, 4]
+min = 999
+for i in int_list:
+    if i < min:
+        min = i
+print(f'Мінімальне число - {min}')
 
+print('')
+print('   Завдання 7')
+str_list = ['abddc', 'vkhfgtr', 'ckjjfdnc', 'dkfjd', 'coroc']
+for i in str_list:
+    if i[0] == i[-1]:
+        print(f'{i}')
+
+print('')
+print('   Завдання 8')
+new_dict = {'c1': 'Red', 'c2': 'Green', 'c3': None}
+new_dict_copy = new_dict.copy()
+for key, value in new_dict.items():
+    if value == None:
+        new_dict_copy.pop(key)
+print(new_dict_copy)
+
+print('')
+print('   Завдання 9')
+new_dict = {'c1': 'Red', 'c2': 'Green', 'c3': 'abracadabra'}
+inp = input('Введіть ключ: ')
+for key in new_dict:
+    if key == inp:
+        print('Такий ключ існує')
+
+print('')
+print('   Завдання 10')
+new_dict = {'c1': 'Red', 'c2': 'Green', 'c3': 'abracadabra'}
+new_dict_copy = new_dict.copy()
+inp = input('Введіть ключ: ')
+for key in new_dict:
+    if key == inp:
+        new_dict_copy.pop(key)
+print(new_dict_copy)
