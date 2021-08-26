@@ -37,15 +37,6 @@ class Manipulation:
     def count_consonant(self):
         return ''.join(s for s in self.stroke if s not in 'aoyeuiAOYEUI')
 
-    def reverse(self):
-        reverse_up_low = ''
-        for letter in self.stroke:
-            if letter.isupper():
-                reverse_up_low = reverse_up_low + letter.lower()
-            else:
-                reverse_up_low = reverse_up_low + letter.upper()
-        return reverse_up_low
-
     def get_domain(self):
         low_loop = True
         castom_stroke = ''
@@ -126,7 +117,7 @@ def main():
                             if low_task == 2:
                                 print(f'{stroke.stroke} - містить {len(stroke.count_consonant())} приголосних букв({stroke.count_consonant()})')
                             if low_task == 3:
-                                print(f'{stroke.stroke}, навпаки - "{stroke.reverse()}"')
+                                print(f'{stroke.stroke}, навпаки - "{stroke.stroke.swapcase()}"')
                             if low_task == 4:
                                 print(f'''Домене ім'я введеного URL - "{stroke.get_domain()}"''')
                             if low_task == 5:
