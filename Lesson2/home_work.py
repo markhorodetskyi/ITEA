@@ -2,7 +2,7 @@ import random
 import time
 
 
-def is_float(value):
+def validate_float(value):
     try:
         if ',' in value:
             value = value.replace(',', '.')
@@ -31,8 +31,8 @@ def yes_or_no():
 
 def check_value(value):
     if value:
-        if is_float(value):
-            value = is_float(value)
+        if validate_float(value):
+            value = validate_float(value)
             if value.isdigit():
                 print(f'Ви ввели число - {value}')
                 return int(value)
