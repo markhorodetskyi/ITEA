@@ -62,7 +62,9 @@ def most_expensive():
              'Black Pepper': 2.5,
              'Paprika': 2.5,
              'Chili Pepper': 3.2,
+             'Pepper': 20,
              'Anise': 4,
+             'Oregano': 8,
              'Cinnamon': 5}
     prices = list(goods.values())
     while len(prices) > 3:
